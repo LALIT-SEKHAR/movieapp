@@ -24,7 +24,7 @@ class App extends Component {
   }
 
   fetchTitle(){
-    this.setState({isloading:true})
+    this.setState({isloading:true, youtubedataisrady: false})
     fetch(`https://www.omdbapi.com/?apikey=3738a2b7&t=${this.state.title}`)
     .then(res => res.json())
     .then(data => this.setState({resiveTitledData: data}))
