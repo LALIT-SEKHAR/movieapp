@@ -79,7 +79,7 @@ class App extends Component {
                   To Watch Click Hear
               </button> 
               : 
-              <iframe title={this.state.resiveTitledData.Title} width="100%" height="auto"
+              <iframe title={this.state.resiveTitledData.Title} width="100%" height="auto" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
                 src={`https://www.youtube.com/embed/${this.state.resiveYoutubeData.items["0"].id.videoId}?autoplay=1`}>
               </iframe>}
             </p>
