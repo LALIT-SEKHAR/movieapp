@@ -11,6 +11,7 @@ class Hero extends Component  {
           resiveTitledData: '',
           resiveYoutubeData: '',
           title: '',
+          year: '',
           googleapiType: 'video',
           youtubedataisrady:false,
           isloading: false,
@@ -29,7 +30,7 @@ class Hero extends Component  {
     
       fetchTitle(){
         this.setState({isloading:true, youtubedataisrady: false})
-        fetch(`https://www.omdbapi.com/?apikey=${IMDB_API_KEY}&t=${this.state.title}`)
+        fetch(`https://www.omdbapi.com/?apikey=${IMDB_API_KEY}&t=${this.state.title}&y=${this.state.year}`)
         .then(res => res.json())
         .then(data => this.setState({resiveTitledData: data}))
         .catch(err => console.log(err))
@@ -59,10 +60,11 @@ class Hero extends Component  {
               <h1>{this.state.resiveTitledData.Title}</h1>
             </div>
             <div className="dataHolder">
-              <div className="titleContener">
-              <input className="title" placeholder="Search by Title" type="text" name="title" onChange={this.handelchanhe}/>
-              <button className="titleBtn" onClick={this.fetchTitle}>Submit</button>
-              </div>
+                <div className="titleContener">
+                  <input className="title" placeholder="Search by Title" type="text" name="title" onChange={this.handelchanhe}/>
+                  <input className="titleyear" placeholder="year" type="text" name="year" onChange={this.handelchanhe}/>
+                  <button className="titleBtn" onClick={this.fetchTitle}>Submit</button>
+                </div>
               <div className="paragrap">
               { this.state.resiveTitledData.Type 
               && 

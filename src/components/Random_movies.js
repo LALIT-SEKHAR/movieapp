@@ -8,4 +8,5 @@ export const Random_Movies = [
     'captain marvel',
     'ant-man',
     'free guy',
+    'Knives Out',
 ]
