@@ -1,17 +1,4 @@
 export const Random_Movies = [
-<<<<<<< HEAD
-    'bloodshot',
-    'aquaman',
-    'iron man',
-    'iron man 2',
-    'iron man 3',
-    'Captain America: The First Avenger',
-    'captain marvel',
-    'ant-man',
-    'free guy',
-    'Knives Out',
-]
-=======
 'Iron Man',
 'The Incredible Hulk',
 'Iron Man 2',
@@ -66,4 +53,3 @@ export const Random_Movies = [
 'Snow White and the Huntsman',
 'Back to the Future',
 ]
->>>>>>> c852695e47e9654bce0bc9ab3b9fe195523873b4
